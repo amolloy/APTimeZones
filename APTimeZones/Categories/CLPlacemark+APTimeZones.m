@@ -14,7 +14,7 @@
 - (NSTimeZone *)timeZone {
     CLLocation *location = self.location;
     
-    NSString *countryCode = self.addressDictionary[@"CountryCode"];
+	NSString *countryCode = self.ISOcountryCode;
     NSTimeZone *timeZone = [[APTimeZones sharedInstance] timeZoneWithLocation:location
                                                                   countryCode:countryCode];
     return timeZone;
